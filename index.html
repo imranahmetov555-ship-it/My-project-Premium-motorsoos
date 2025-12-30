@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Коллаген — польза и применение</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+ <div class="logo">
+  <img src="img/vitaboost_logo_transparent.png">
+  <p>ИНТЕРНЕТ-МАГАЗИН</p>
+ </div>
+
+ 
+  
+  <nav class="nav" id="nav">
+    <div class="logor">VITABOOST</div>
+    <ul class="nav-links">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">О нас</a></li>
+      <li><a href="#">Жалобы</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+  </nav>
+
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+
+
+   
+       
+   
+
+
+
+  
+</header>
+
+<section class="hero">
+  <h1>Коллаген</h1>
+<style>
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  
+  font-family: Arial, sans-serif;
+  padding-top: 70px; /* чтобы контент не залезал под nav */
+}
+
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  z-index: 1000;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.4);
+}
+
+
+.logor {
+  color: #55a30b;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 17px;
+  position: relative;
+  padding: 8px 12px;
+  transition: 0.3s;
+ 
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #8e9807, #00cfff);
+  transition: 0.4s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #00ff88;
+}
+
+
+.burger {
+  width: 35px;
+  height: 25px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.burger span {
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #ffffff, #6d9c15);
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.modal {
+ 
+  position: fixed;
+  inset: 0;
+  background: rgb(255, 255, 255,0.15);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #ffffff;
+  color: #000000;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 15px;
+  position: relative;
+  animation: show .3s ease;
+}
+
+.modal-content img {
+  width: 50%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@keyframes show {
+  from {transform: scale(0.8); opacity: 0;}
+  to {transform: scale(1); opacity: 1;}
+}
+
+@media (max-width: 768px) {
+.logor{
+  color: rgb(74, 149, 16);
+}
+  .burger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: rgba(15, 15, 15, 0.97);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    transform: translateX(100%);
+    transition: 0.5s ease;
+   
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .nav-links a {
+    font-size: 26px;
+    
+    padding: 10px 80px;
+    gap: 20px;
+  }
+}
+</style>
+
+  <div class="cont1">
+ 
+    
+        <div class="catalog ">
+           
+        <div class="item">
+        <img src="https://i.ebayimg.com/images/g/djwAAOSwl4dhVAtm/s-l1200.jpg">
+               
+                <p>El Amor Premium Tart Cherry Collagen</p>
+                 
+               <a href="Pay.HTML"><button>Купить</button></a> 
+                 <button class="open-modal"
+  data-title="Коллаген Вишня"
+  data-price="550 сом"
+  data-desc="Корейский коллаген с экстрактом вишни. Поддерживает кожу, суставы и волосы."
+  data-img="img/cherry.jpg">
+  Подробнее
+</button>
+                 </div>
+           
+            <div class="item">
+              <img src="https://i.ebayimg.com/images/g/djwAAOSwl4dhVAtm/s-l1200.jpg">
+               
+                <p>Realme GT7 Pro</p>
+               
+                <a href="Pay.HTML"><button>Купить</button></a> 
+             <button class="open-modal"
+  data-title="Коллаген Вишня"
+  data-price="550 сом"
+  data-desc="Корейский коллаген с экстрактом вишни. Поддерживает кожу, суставы и волосы."
+  data-img="img/cherry.jpg">
+  Подробнее
+</button>
+                 </div>
+            
+            <div class="item">
+              <img src="https://ir.ozone.ru/s3/multimedia-7/c1000/6609022135.jpg">
+                
+                <p>Google Pixel 10 Pro</p>
+               
+                 <a href="Pay.HTML"><button>Купить</button></a> 
+               <button class="open-modal"
+  data-title="Коллаген Вишня"
+  data-price="550 сом"
+  data-desc="Корейский коллаген с экстрактом вишни. Поддерживает кожу, суставы и волосы."
+  data-img="https://ir.ozone.ru/s3/multimedia-7/c1000/6609022135.jpg">
+  Подробнее
+</button>
+
+          </div>
+            
+
+            <div class="item">
+              <img src="https://shopme365.com/image/cache/catalog/korea/healts/bad/HP_double_glutatione-550x550w.jpg">
+               
+                <p>Samsung S25 ULTRA </p>
+               
+                 <a href="Pay.HTML"><button>Купить</button></a> 
+                 <button class="open-modal"
+  data-title="Коллаген Вишня"
+  data-price="550 сом"
+  data-desc="Корейский коллаген с экстрактом вишни. Поддерживает кожу, суставы и волосы."
+  data-img="img/cherry.jpg">
+  Подробнее
+</button>
+             </div>
+                
+
+                <div class="item">
+                  <img src="https://ekb.hi-stores.ru/upload/iblock/174/d39616q452obe5dugqb4d7sk0exsf4pa.jpg">
+              
+                <p>OnePlus 15</p>
+                <p>999 <strong>$</strong></p>
+              <a href="Pay.HTML"><button>Купить</button></a> 
+                  <button class="open-modal"
+  data-title="Коллаген Вишня"
+  data-price="550 сом"
+  data-desc="Корейский коллаген с экстрактом вишни. Поддерживает кожу, суставы и волосы."
+  data-img="img/cherry.jpg">
+  Подробнее
+</button>
+                 </div>
+        
+  
+            <div class="item">
+              <img src="https://pdaplaza.ca/wp-content/uploads/2025/10/buy-vivo-x300-pro-5g-dual-sim-16gb-512gb-free-blue-cn-version-298.jpg">
+               
+                <p>Vivo X300 Pro</p>
+                <p>799 <strong>$</strong></p>
+                <a href="Pay.HTML"><button>Купить</button></a> 
+                 <button class="open-modal"
+  data-title="Коллаген Вишя"
+  data-price="550 сом"
+  data-desc="Корейский коллаген с экстрактом вишни. Поддерживает кожу, суставы и волосы."
+  data-img="img/cherry.jpg">
+  Подробнее
+</button>
+            </div>
+
+           
+                
+    </div>
+ </div>
+
+ </div>
+ <div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <img id="modal-img">
+    <h2 id="modal-title"></h2>
+    <p id="modal-desc"></p>
+    <strong id="modal-price"></strong>
+  </div>
+</div>
+ 
+</section>
+
+
+</section>
+
+<footer id="contacts" class="footer">
+  <p>© 2025 Collagen Store</p>
+  <p>Тел: +996 XXX XXX XXX</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+<script>
+const modal = document.getElementById('modal');
+
+document.querySelectorAll('.open-modal').forEach(btn => {
+  btn.addEventListener('click', () => {
+    modal.classList.add('active');
+    document.getElementById('modal-title').textContent = btn.dataset.title;
+    document.getElementById('modal-desc').textContent = btn.dataset.desc;
+    document.getElementById('modal-price').textContent = btn.dataset.price;
+    document.getElementById('modal-img').src = btn.dataset.img;
+  });
+});
+
+document.querySelector('.close').onclick = () => {
+  modal.classList.remove('active');
+};
+
+modal.onclick = (e) => {
+  if (e.target === modal) modal.classList.remove('active');
+};
+</script>
+<script>
+const burger = document.getElementById('burger');
+const navLinks = document.querySelector('.nav-links');
+
+burger.addEventListener('click', () => {
+  burger.classList.toggle('active');
+  navLinks.classList.toggle('active');
+});
+</script>
